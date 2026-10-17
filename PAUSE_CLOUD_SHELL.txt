@@ -1,0 +1,13 @@
+PAUSE署名セットアップ
+
+ターミナルで次の1行だけ実行してください:
+
+  bash pause-signing-setup.sh
+
+その後は画面の案内に従ってください。
+Apple関連は基本:
+- Appleアカウントへログイン: Yes
+- 既存Distribution Certificateを再利用: Yes
+- Provisioning Profileを生成/更新: Yes
+
+Apple IDのパスワード・2段階認証コードはCloud Shell内だけに入力し、ChatGPTには送らないでください。
