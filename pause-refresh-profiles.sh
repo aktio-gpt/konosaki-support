@@ -114,19 +114,15 @@ fi
 echo
 echo "3/3 Provisioning Profileを更新します。"
 echo
-echo "このあとEASのメニューでは次の順で進めてください:"
-echo "  ・production"
-echo "  ・Build Credentials"
-echo "  ・All: Set up all the required credentials to build your project"
+echo "このあとEASが署名情報を直接再構成します。"
 echo "  ・Appleアカウントへログイン → Yes"
 echo "  ・既存Distribution Certificateを再利用 → Yes"
-echo "  ・Generate a new Apple Provisioning Profile? → Yes"
-echo "  ・PAUSE本体 + 3拡張すべてを更新"
+echo "  ・PAUSE本体 + 3拡張の新しいProvisioning Profileを作成"
 echo
 echo "Apple IDのパスワード・2段階認証コードはCloud Shell内だけに入力してください。"
 echo
 
-npx --yes eas-cli@latest credentials --platform ios
+npx --yes eas-cli@latest credentials:configure-build --platform ios --profile production
 
 echo
 echo "============================================================"
